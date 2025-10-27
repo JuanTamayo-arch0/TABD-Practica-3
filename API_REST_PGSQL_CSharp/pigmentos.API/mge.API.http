@@ -1,0 +1,21 @@
+@mge.API_HostAddress = https://localhost:7288
+
+GET {{mge.API_HostAddress}}/v1/estadisticas/
+Accept: application/json
+
+### colores
+
+GET {{mge.API_HostAddress}}/api/colores/
+Accept: application/json
+
+### familias_quimicas
+
+GET {{mge.API_HostAddress}}/api/familias_quimicas/
+Accept: application/json
+
+
+### pigmentos
+
+GET {{mge.API_HostAddress}}/api/pigmentos/
+Accept: application/json
+

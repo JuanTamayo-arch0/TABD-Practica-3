@@ -1,0 +1,52 @@
+[
+  {
+    "id": "35171359-745f-4592-86ff-ab187eb346c7",
+    "nombre": "Azul",
+    "codigo_hexadecimal": "#0F4C75"
+  },
+  {
+    "id": "458cf6d9-ecd0-4e2c-a4c9-75471c01182e",
+    "nombre": "Rojo",
+    "codigo_hexadecimal": "#C70039"
+  },
+  {
+    "id": "74d908a6-55d1-45cb-aa6b-7a4f372a86c4",
+    "nombre": "Amarillo",
+    "codigo_hexadecimal": "#FFC300"
+  },
+  {
+    "id": "813256fc-0d90-4039-80e9-daaebfcc6fa5",
+    "nombre": "Verde",
+    "codigo_hexadecimal": "#4F7942"
+  },
+  {
+    "id": "22088c35-9578-4b71-80ee-3b8d2143ad7f",
+    "nombre": "Blanco",
+    "codigo_hexadecimal": "#FFFFFF"
+  },
+  {
+    "id": "87bf421b-3b0d-4274-9fd8-dd67b89c53d3",
+    "nombre": "Negro",
+    "codigo_hexadecimal": "#1C1C1C"
+  },
+  {
+    "id": "4b1ce5c4-4821-42f4-9240-d952108c2e1a",
+    "nombre": "Naranja",
+    "codigo_hexadecimal": "#FF5733"
+  },
+  {
+    "id": "d89ad121-eeea-4535-ab31-f70c8db2cbc4",
+    "nombre": "Violeta",
+    "codigo_hexadecimal": "#8E44AD"
+  },
+  {
+    "id": "c1985cf5-d3cf-4611-9a2f-9992ae091d39",
+    "nombre": "Marrón",
+    "codigo_hexadecimal": "#8B4513"
+  },
+  {
+    "id": "a7bf761e-688d-4d01-a0ec-bcedb8f3022b",
+    "nombre": "Gris",
+    "codigo_hexadecimal": "#808080"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "e5793a7d-1851-46d9-b272-96315f61d4eb",
+    "nombre_comercial": "Azul Ultramar",
+    "formula_quimica": "Na₈₁₀Al₆Si₆S₄",
+    "numero_ci": "PB29",
+    "familia_quimica_id": "58271bbe-ff83-4729-ba53-ae11b49a3c6d",
+    "color_principal_id": "35171359-745f-4592-86ff-ab187eb346c7",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "d67f7415-6c90-402f-8198-d24d4411b80b",
+    "nombre_comercial": "Azul de Prusia",
+    "formula_quimica": "Fe₄[Fe(CN)₆]₃",
+    "numero_ci": "PB27",
+    "familia_quimica_id": "1ff472d8-d6aa-4272-9e78-1076d6069314",
+    "color_principal_id": "35171359-745f-4592-86ff-ab187eb346c7",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "7c783611-4adc-4f9b-a99b-1b139d6cf68b",
+    "nombre_comercial": "Azul Cobalto",
+    "formula_quimica": "CoO·Al₂O₃",
+    "numero_ci": "PB28",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "35171359-745f-4592-86ff-ab187eb346c7",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "2ef79722-f1f6-42ad-801e-6bb40cb10dda",
+    "nombre_comercial": "Rojo Cromo",
+    "formula_quimica": "PbCrO₄·PbO",
+    "numero_ci": "PR104",
+    "familia_quimica_id": "b1505911-ea8e-4be8-89a9-00ac2f296250",
+    "color_principal_id": "458cf6d9-ecd0-4e2c-a4c9-75471c01182e",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "b49d996c-b108-4aa2-b6a2-3430d3c8647c",
+    "nombre_comercial": "Rojo Cadmio",
+    "formula_quimica": "CdSe",
+    "numero_ci": "PR108",
+    "familia_quimica_id": "fedf1c58-bfd3-4ed5-bd03-8899c1387604",
+    "color_principal_id": "458cf6d9-ecd0-4e2c-a4c9-75471c01182e",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "b66852f4-99a1-494a-a872-102f5a852c49",
+    "nombre_comercial": "Óxido de Hierro Rojo",
+    "formula_quimica": "Fe₂O₃",
+    "numero_ci": "PR101",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "458cf6d9-ecd0-4e2c-a4c9-75471c01182e",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "1aaab314-f53b-44f2-9e5b-654ccc9b31a4",
+    "nombre_comercial": "Amarillo Cromo",
+    "formula_quimica": "PbCrO₄",
+    "numero_ci": "PY34",
+    "familia_quimica_id": "b1505911-ea8e-4be8-89a9-00ac2f296250",
+    "color_principal_id": "74d908a6-55d1-45cb-aa6b-7a4f372a86c4",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "5fbe8569-740c-4dae-b881-9ed936b1237c",
+    "nombre_comercial": "Amarillo Cadmio Claro",
+    "formula_quimica": "CdS",
+    "numero_ci": "PY35",
+    "familia_quimica_id": "fedf1c58-bfd3-4ed5-bd03-8899c1387604",
+    "color_principal_id": "74d908a6-55d1-45cb-aa6b-7a4f372a86c4",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "71fd4ce4-d0a3-4e6d-9a7d-a22e0f698cdf",
+    "nombre_comercial": "Amarillo de Nápoles",
+    "formula_quimica": "Pb₃(SbO₄)₂",
+    "numero_ci": "PY41",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "74d908a6-55d1-45cb-aa6b-7a4f372a86c4",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "30791ba7-49e5-4f93-afb5-f6d9224d7a01",
+    "nombre_comercial": "Verde Óxido de Cromo",
+    "formula_quimica": "Cr₂O₃",
+    "numero_ci": "PG17",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "813256fc-0d90-4039-80e9-daaebfcc6fa5",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "7d71e713-28f0-43ff-890a-226104547434",
+    "nombre_comercial": "Verde Esmeralda",
+    "formula_quimica": "Cu(C₂H₃O₂)₂·3Cu(AsO₂)₂",
+    "numero_ci": "PG21",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "813256fc-0d90-4039-80e9-daaebfcc6fa5",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "4009164b-c560-46b1-b25b-e52c2c6ca1de",
+    "nombre_comercial": "Blanco de Titanio",
+    "formula_quimica": "TiO₂",
+    "numero_ci": "PW6",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "22088c35-9578-4b71-80ee-3b8d2143ad7f",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "cc386c4d-cdc1-4532-90a8-97813295735b",
+    "nombre_comercial": "Blanco de Zinc",
+    "formula_quimica": "ZnO",
+    "numero_ci": "PW4",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "22088c35-9578-4b71-80ee-3b8d2143ad7f",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "91f2fefc-80f4-4d68-85d8-17829991706a",
+    "nombre_comercial": "Negro de Hueso",
+    "formula_quimica": "Ca₃(PO₄)₂ + C",
+    "numero_ci": "PBk9",
+    "familia_quimica_id": "e75c22c6-1922-48d6-8703-49a61d90009e",
+    "color_principal_id": "87bf421b-3b0d-4274-9fd8-dd67b89c53d3",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "d261299c-30eb-4705-878c-f275e4d0b6ee",
+    "nombre_comercial": "Negro de Hierro",
+    "formula_quimica": "Fe₃O₄",
+    "numero_ci": "PBk11",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "87bf421b-3b0d-4274-9fd8-dd67b89c53d3",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "715be1ec-07d2-49fa-bcea-8a7004634547",
+    "nombre_comercial": "Naranja de Cadmio",
+    "formula_quimica": "Cd(S,Se)",
+    "numero_ci": "PO20",
+    "familia_quimica_id": "fedf1c58-bfd3-4ed5-bd03-8899c1387604",
+    "color_principal_id": "4b1ce5c4-4821-42f4-9240-d952108c2e1a",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "fa1f1f70-ec9e-4811-9fbf-4514fe833619",
+    "nombre_comercial": "Violeta de Manganeso",
+    "formula_quimica": "Mn₃(PO₄)₂",
+    "numero_ci": "PV16",
+    "familia_quimica_id": "e75c22c6-1922-48d6-8703-49a61d90009e",
+    "color_principal_id": "d89ad121-eeea-4535-ab31-f70c8db2cbc4",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "e0a4b4b4-8168-47a8-930d-416132fff52f",
+    "nombre_comercial": "Tierra de Siena Natural",
+    "formula_quimica": "Fe₂O₃·nH₂O + MnO₂ + Al₂O₃ + SiO₂",
+    "numero_ci": "PBr7",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "c1985cf5-d3cf-4611-9a2f-9992ae091d39",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "b6780668-102a-4311-b926-ad3759ee2207",
+    "nombre_comercial": "Tierra de Sombra",
+    "formula_quimica": "Fe₂O₃ + MnO₂ + SiO₂ + Al₂O₃",
+    "numero_ci": "PBr8",
+    "familia_quimica_id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "color_principal_id": "c1985cf5-d3cf-4611-9a2f-9992ae091d39",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  },
+  {
+    "id": "8076241c-b927-44a0-8a7e-a400ec91858f",
+    "nombre_comercial": "Gris Payne",
+    "formula_quimica": "Fe₄[Fe(CN)₆]₃ + TiO₂",
+    "numero_ci": "PBk21",
+    "familia_quimica_id": "1ff472d8-d6aa-4272-9e78-1076d6069314",
+    "color_principal_id": "a7bf761e-688d-4d01-a0ec-bcedb8f3022b",
+    "created_at": "2025-09-10 18:07:01.037818 +00:00",
+    "updated_at": "2025-09-10 18:07:01.037818 +00:00"
+  }
+]

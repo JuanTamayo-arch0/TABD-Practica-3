@@ -1,0 +1,48 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table "core"."colores" {
+  "id" UUID [pk, default: `gen_random_uuid()`, note: 'Identificador único del color generado automáticamente como UUID']
+  "nombre" VARCHAR(50) [not null, note: 'Nombre descriptivo del color (ej: Azul, Rojo, Verde). Debe ser único en el catálogo']
+  "codigo_hexadecimal" VARCHAR(7) [not null, note: 'Código de color hexadecimal para representación digital en formato #RRGGBB (ej: #0F4C75)']
+
+  Indexes {
+    nombre [unique, name: "uq_colores_nombre"]
+    codigo_hexadecimal [unique, name: "uq_colores_codigo_hex"]
+  }
+  Note: 'Catálogo maestro de colores principales utilizados para la clasificación cromática de pigmentos inorgánicos en procesos artísticos'
+}
+
+Table "core"."familias_quimicas" {
+  "id" UUID [pk, default: `gen_random_uuid()`, note: 'Identificador único de la familia química generado automáticamente como UUID']
+  "nombre" VARCHAR(100) [not null, note: 'Nombre de la familia química (ej: Óxidos, Sulfatos, Cromatos, Carbonatos). Debe ser único']
+  "descripcion" TEXT [not null, note: 'Descripción detallada de las características químicas, propiedades moleculares y comportamiento de los pigmentos de esta familia']
+  "created_at" TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+  "updated_at" TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+
+  Indexes {
+    nombre [unique, name: "uq_familias_nombre"]
+  }
+  Note: 'Catálogo maestro de familias químicas que clasifican los pigmentos inorgánicos según su composición molecular y estructura química'
+}
+
+Table "core"."pigmentos" {
+  "id" UUID [pk, default: `gen_random_uuid()`, note: 'Identificador único del pigmento generado automáticamente como UUID']
+  "nombre_comercial" VARCHAR(200) [not null, note: 'Nombre comercial del pigmento utilizado en el mercado artístico (ej: Azul Cobalto, Rojo Cadmio)']
+  "formula_quimica" VARCHAR(100) [not null, note: 'Fórmula química del compuesto inorgánico usando nomenclatura estándar (ej: CoO·Al₂O₃, CdS)']
+  "numero_ci" VARCHAR(20) [not null, note: 'Número del Color Index International (CII) - identificador estándar internacional (ej: PB28, PR108)']
+  "familia_quimica_id" UUID [not null, note: 'Referencia UUID a la familia química a la que pertenece el pigmento']
+  "color_principal_id" UUID [not null, note: 'Referencia UUID al color principal que caracteriza visualmente al pigmento']
+  "created_at" TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+  "updated_at" TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+
+  Indexes {
+    nombre_comercial [unique, name: "uq_pigmentos_nombre_comercial"]
+    numero_ci [unique, name: "uq_pigmentos_numero_ci"]
+  }
+  Note: 'Registro principal de pigmentos inorgánicos utilizados en procesos artísticos, incluyendo propiedades químicas, comerciales y clasificaciones estándar'
+}
+
+Ref "fk_pigmentos_familia_quimica":"core"."familias_quimicas"."id" < "core"."pigmentos"."familia_quimica_id" [update: cascade, delete: restrict]
+
+Ref "fk_pigmentos_color_principal":"core"."colores"."id" < "core"."pigmentos"."color_principal_id" [update: cascade, delete: restrict]

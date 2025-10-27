@@ -1,0 +1,114 @@
+using Asp.Versioning;
+using pigmentos.API.DbContexts;
+using pigmentos.API.Interfaces;
+using pigmentos.API.Models;
+using pigmentos.API.Repositories;
+using pigmentos.API.Services;
+using Microsoft.OpenApi.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ******************************************
+// --- Configuración de la base de datos --
+// ******************************************
+
+builder.Services.Configure<DatabaseSettings>(
+    builder.Configuration.GetSection("DatabaseSettings"));
+
+var databaseSettings = builder.Configuration
+    .GetSection("DatabaseSettings")
+    .Get<DatabaseSettings>();
+
+var pgsqlConnectionString = databaseSettings?.BuildConnectionString();
+
+//Agregar la cadena de conexión a la configuración
+builder.Configuration["ConnectionStrings:mgePL"] = pgsqlConnectionString;
+
+// ***********************************
+// --- Configuración del DB Context --
+// ***********************************
+
+builder.Services.AddSingleton<PgsqlDbContext>();
+
+// ****************************************
+// --- Configuración de los repositorios --
+// ****************************************
+
+builder.Services.AddScoped<IFamiliaRepository, FamiliaRepository>();
+builder.Services.AddScoped<IColorRepository, ColorRepository>();
+builder.Services.AddScoped<IPigmentoRepository, PigmentoRepository>();
+
+// ************************************************
+// --- Configuración de los servicios asociados  --
+// ************************************************
+
+builder.Services.AddScoped<FamiliaService>();
+builder.Services.AddScoped<ColorService>();
+builder.Services.AddScoped<PigmentoService>();
+
+// Add services to the container.
+builder.Services.AddControllers()
+    .AddJsonOptions(
+        options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "API de Pigmentos Inorgánicos",
+        Description = "API para la gestión de información de pigmentos inorgánicos utilizados en insumos artísticos."
+    });
+});
+
+// ***********************************************************
+// --- Configuración del control de versiones para el API  --
+// ***********************************************************
+
+builder.Services.AddApiVersioning(opt =>
+    {
+        opt.DefaultApiVersion = new ApiVersion(1, 0);
+        opt.AssumeDefaultVersionWhenUnspecified = true;
+        opt.ReportApiVersions = true;
+        opt.ApiVersionReader = new HeaderApiVersionReader("api-version");
+    }
+)
+    .AddMvc()
+    .AddApiExplorer(setup =>
+        {
+            setup.GroupNameFormat = "'v'VVV";
+            setup.SubstituteApiVersionInUrl = true;
+            setup.DefaultApiVersion = new ApiVersion(1, 0);
+            setup.AssumeDefaultVersionWhenUnspecified = true;
+        });
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+//Modificamos el encabezado de las peticiones para ocultar el web server utilizado
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Append("Server", "MGEServer");
+    await next();
+});
+
+//app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

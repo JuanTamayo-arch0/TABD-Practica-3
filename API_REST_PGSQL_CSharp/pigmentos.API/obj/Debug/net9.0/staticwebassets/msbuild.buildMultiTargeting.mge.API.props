@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/mge.API.props" />
+</Project>

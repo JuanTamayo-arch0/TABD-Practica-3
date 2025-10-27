@@ -1,0 +1,58 @@
+[
+  {
+    "id": "9c2c7809-4d3e-4d1d-84ec-fdd6f98cc1cc",
+    "nombre": "Óxidos",
+    "descripcion": "Compuestos inorgánicos formados por la combinación de un elemento con oxígeno",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  },
+  {
+    "id": "fedf1c58-bfd3-4ed5-bd03-8899c1387604",
+    "nombre": "Sulfuros",
+    "descripcion": "Compuestos químicos binarios del azufre con elementos menos electronegativos",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  },
+  {
+    "id": "b1505911-ea8e-4be8-89a9-00ac2f296250",
+    "nombre": "Cromatos",
+    "descripcion": "Sales del ácido crómico que contienen el anión cromato CrO₄²⁻",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  },
+  {
+    "id": "1ff472d8-d6aa-4272-9e78-1076d6069314",
+    "nombre": "Ferrocianuros",
+    "descripcion": "Compuestos que contienen el anión ferrocianuro [Fe(CN)₆]⁴⁻",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  },
+  {
+    "id": "bf8cb21f-0da5-47b1-bafa-a8c2dec4f0e7",
+    "nombre": "Carbonatos",
+    "descripcion": "Sales derivadas del ácido carbónico que contienen el anión CO₃²⁻",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  },
+  {
+    "id": "58271bbe-ff83-4729-ba53-ae11b49a3c6d",
+    "nombre": "Silicatos",
+    "descripcion": "Compuestos que contienen aniones de silicio y oxígeno en diversas formas",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  },
+  {
+    "id": "516a37e7-d8b4-4d23-b270-072fff34bdef",
+    "nombre": "Titanatos",
+    "descripcion": "Compuestos que contienen el ion titanato TiO₃²⁻",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  },
+  {
+    "id": "e75c22c6-1922-48d6-8703-49a61d90009e",
+    "nombre": "Fosfatos",
+    "descripcion": "Sales derivadas del ácido fosfórico que contienen el anión PO₄³⁻",
+    "created_at": "2025-09-10 18:07:00.751845 +00:00",
+    "updated_at": "2025-09-10 18:07:00.751845 +00:00"
+  }
+]
