@@ -1,47 +1,47 @@
-# API Pigmentos Inorgánicos 🎨
+# Inorganic Pigments API 🎨
 
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-## 🎯 Descripción del Proyecto
+## 🎯 Project Description
 
-Este repositorio contiene la implementación completa de una **API REST** para la gestión de pigmentos inorgánicos utilizados en procesos artísticos. El proyecto está desarrollado como ejercicio práctico para el curso de **Tópicos Avanzados de Bases de Datos**, implementando el **patrón repositorio** con separación por capas y enfocándose en proporcionar acceso centralizado y estructurado a información especializada sobre pigmentos, sus familias químicas y propiedades cromáticas.
+This repository contains the complete implementation of a **REST API** for managing inorganic pigments used in artistic processes. The project is developed as a practical exercise for the **Advanced Database Topics** course, implementing the **repository pattern** with layered separation and focusing on providing centralized and structured access to specialized information about pigments, their chemical families, and chromatic properties.
 
-### 🚀 Objetivo
+### 🚀 Objective
 
-Desarrollar una API REST robusta que permita:
-- Gestión completa del catálogo de pigmentos inorgánicos
-- Consultas por clasificación química y cromática
-- Identificación mediante estándar Color Index International (CII)
-- Análisis comparativo de propiedades para toma de decisiones artísticas
-- Acceso programático para aplicaciones de terceros
+Develop a robust REST API that allows:
+- Complete management of the inorganic pigments catalog
+- Queries by chemical and chromatic classification
+- Identification using the Color Index International (CII) standard
+- Comparative analysis of properties for artistic decision-making
+- Programmatic access for third-party applications
 
 ---
 
-## 👥 Equipo de Desarrollo
+## 👥 Development Team
 
-### 👨‍💻 Integrantes
+### 👨‍💻 Members
 
-| Estudiante | ID | Correo Institucional | Rol |
-|------------|----|--------------------|-----|
-| **Juan Jose Tamayo Ospina** | 000193632 | juanjose.tamayo@upb.edu.co | DESARROLLADOR |
-| **Daniel Cardona Gonzalez** | 000414882 | daniel.cardonag.col@upb.edu.co | DESARROLLADOR |
+| Student | ID | Institutional Email | Role |
+|---------|----|--------------------|------|
+| **Juan Jose Tamayo Ospina** | 000193632 | juanjose.tamayo@upb.edu.co | DEVELOPER |
+| **Daniel Cardona Gonzalez** | 000414882 | daniel.cardonag.col@upb.edu.co | DEVELOPER |
 
-### 🏫 Información Académica
-- **Universidad:** Universidad Pontificia Bolivariana
-- **Programa:** Ingeniería en Sistemas e Informática
-- **Materia:** Tópicos Avanzados de Bases de Datos
+### 🏫 Academic Information
+- **University:** Universidad Pontificia Bolivariana
+- **Program:** Systems and Computer Engineering
+- **Course:** Advanced Database Topics
 - **NRC:** 30286, 30578
-- **Período:** 2025-2
-- **Fecha de Entrega:** 24 de septiembre de 2025
+- **Period:** 2025-2
+- **Delivery Date:** September 24, 2025
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+## 🏗️ System Architecture
 
-### Estructura de Capas
+### Layer Structure
 
 ```
 Controllers → Services → Repositories (via Interfaces) → DB Context
@@ -49,162 +49,162 @@ Controllers → Services → Repositories (via Interfaces) → DB Context
               IRepositories (Interfaces)
 ```
 
-### 📋 Componentes Principales
-- **Controllers** - Capa de presentación y manejo de peticiones HTTP
-- **Services** - Lógica de negocio y validaciones de reglas de dominio
-- **Interfaces** - Contratos para desacoplamiento de repositorios
-- **Repositories** - Implementaciones de acceso a datos y operaciones CRUD
-- **Entities** - Modelos de dominio de pigmentos, familias y colores
-- **Data** - Contextos y configuraciones de base de datos
+### 📋 Main Components
+- **Controllers** - Presentation layer and HTTP request handling
+- **Services** - Business logic and domain rule validations
+- **Interfaces** - Contracts for repository decoupling
+- **Repositories** - Data access implementations and CRUD operations
+- **Entities** - Domain models for pigments, families, and colors
+- **Data** - Database contexts and configurations
 
-## 🗃️ Modelo de Datos
+## 🗃️ Data Model
 
-El sistema implementa un **modelo relacional normalizado** con las siguientes entidades:
+The system implements a **normalized relational model** with the following entities:
 
-### 🎨 Entidades Principales
+### 🎨 Main Entities
 
-#### Pigmentos
-Registro principal de pigmentos inorgánicos para arte
+#### Pigments
+Main registry of inorganic pigments for art
 
-- `Id` (UUID) - Identificador único
-- `NombreComercial` (TEXT) - Nombre comercial del pigmento
-- `FormulaQuimica` (TEXT) - Fórmula química del compuesto
-- `NumeroCi` (TEXT) - Color Index International (estándar mundial)
-- `FamiliaQuimicaId` (UUID) - Referencia a familia química
-- `ColorPrincipalId` (UUID) - Referencia al color principal
+- `Id` (UUID) - Unique identifier
+- `NombreComercial` (TEXT) - Commercial name of the pigment
+- `FormulaQuimica` (TEXT) - Chemical formula of the compound
+- `NumeroCi` (TEXT) - Color Index International (worldwide standard)
+- `FamiliaQuimicaId` (UUID) - Reference to chemical family
+- `ColorPrincipalId` (UUID) - Reference to main color
 
-#### Familias Químicas
-Clasificación por composición química
+#### Chemical Families
+Classification by chemical composition
 
-- `Id` (UUID) - Identificador único
-- `Nombre` (TEXT) - Nombre de la familia química
-- `Descripcion` (TEXT) - Descripción detallada de propiedades
+- `Id` (UUID) - Unique identifier
+- `Nombre` (TEXT) - Name of the chemical family
+- `Descripcion` (TEXT) - Detailed description of properties
 
-#### Colores
-Catálogo cromático con representación digital
+#### Colors
+Chromatic catalog with digital representation
 
-- `Id` (UUID) - Identificador único
-- `Nombre` (TEXT) - Nombre del color
-- `CodigoHexadecimal` (TEXT) - Código hex para representación digital
+- `Id` (UUID) - Unique identifier
+- `Nombre` (TEXT) - Color name
+- `CodigoHexadecimal` (TEXT) - Hex code for digital representation
 
-### 📊 Datos de Ejemplo
+### 📊 Sample Data
 
-| Pigmento | Fórmula | Código CI | Familia | Color | Hex |
-|----------|---------|-----------|---------|-------|-----|
-| Azul Cobalto | CoO·Al₂O₃ | PB28 | Óxidos | Azul | #0F4C75 |
-
----
-
-## 🛠️ Stack Tecnológico
-
-| Tecnología | Versión | Propósito |
-|-----------|---------|-----------|
-| **.NET** | 8.x | Framework principal de desarrollo |
-| **C#** | 12.0 | Lenguaje de programación |
-| **PostgreSQL** | 12+ | Sistema de gestión de base de datos |
-| **Swagger/OpenAPI** | 3.0 | Documentación interactiva de API |
-| **UUID/GUID** | - | Identificadores seguros |
-| **Git** | 2.0+ | Control de versiones |
+| Pigment | Formula | CI Code | Family | Color | Hex |
+|---------|---------|---------|--------|-------|-----|
+| Cobalt Blue | CoO·Al₂O₃ | PB28 | Oxides | Blue | #0F4C75 |
 
 ---
 
-## 🌐 Endpoints de la API
+## 🛠️ Technology Stack
 
-### 🎨 Pigmentos
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **.NET** | 8.x | Main development framework |
+| **C#** | 12.0 | Programming language |
+| **PostgreSQL** | 12+ | Database management system |
+| **Swagger/OpenAPI** | 3.0 | Interactive API documentation |
+| **UUID/GUID** | - | Secure identifiers |
+| **Git** | 2.0+ | Version control |
+
+---
+
+## 🌐 API Endpoints
+
+### 🎨 Pigments
 ```http
-GET    /api/pigmentos                        # 📋 Listar todos los pigmentos
-GET    /api/pigmentos/{pigmento_id}          # 🔍 Obtener pigmento específico
-POST   /api/pigmentos                        # ➕ Crear nuevo pigmento
-PUT    /api/pigmentos                        # ✏️ Actualizar pigmento
-DELETE /api/pigmentos/{pigmento_id}          # 🗑️ Eliminar pigmento
+GET    /api/pigmentos                        # 📋 List all pigments
+GET    /api/pigmentos/{pigmento_id}          # 🔍 Get specific pigment
+POST   /api/pigmentos                        # ➕ Create new pigment
+PUT    /api/pigmentos                        # ✏️ Update pigment
+DELETE /api/pigmentos/{pigmento_id}          # 🗑️ Delete pigment
 ```
 
-### 🧪 Familias Químicas
+### 🧪 Chemical Families
 ```http
-GET    /api/familias                         # 📋 Listar todas las familias
-GET    /api/familias/{familia_id}            # 🔍 Obtener familia específica
-GET    /api/familias/{familia_id}/pigmentos  # 🎨 Pigmentos por familia
+GET    /api/familias                         # 📋 List all families
+GET    /api/familias/{familia_id}            # 🔍 Get specific family
+GET    /api/familias/{familia_id}/pigmentos  # 🎨 Pigments by family
 ```
 
-### 🌈 Colores
+### 🌈 Colors
 ```http
-GET    /api/colores                          # 📋 Listar todos los colores
-GET    /api/colores/{color_id}               # 🔍 Obtener color específico
-GET    /api/colores/{color_id}/pigmentos     # 🎨 Pigmentos por color
-POST   /api/colores                          # ➕ Crear nuevo color
-PUT    /api/colores                          # ✏️ Actualizar color
-DELETE /api/colores/{color_id}               # 🗑️ Eliminar color
+GET    /api/colores                          # 📋 List all colors
+GET    /api/colores/{color_id}               # 🔍 Get specific color
+GET    /api/colores/{color_id}/pigmentos     # 🎨 Pigments by color
+POST   /api/colores                          # ➕ Create new color
+PUT    /api/colores                          # ✏️ Update color
+DELETE /api/colores/{color_id}               # 🗑️ Delete color
 ```
 
-**Total: 14 endpoints implementados** ✅
+**Total: 14 implemented endpoints** ✅
 
 ---
 
-## ⚙️ Implementación Técnica
+## ⚙️ Technical Implementation
 
-### 📖 Operaciones de Lectura (SELECT)
-Las consultas utilizan **sentencias SQL optimizadas** para máximo rendimiento
+### 📖 Read Operations (SELECT)
+Queries use **optimized SQL statements** for maximum performance
 
-### ✍️ Operaciones de Escritura (CUD)
-Implementadas mediante **procedimientos almacenados** para:
-- ✅ Garantizar integridad de datos
-- 🔒 Seguridad en operaciones críticas
-- 📈 Optimización de transacciones
+### ✍️ Write Operations (CUD)
+Implemented through **stored procedures** for:
+- ✅ Ensuring data integrity
+- 🔒 Security in critical operations
+- 📈 Transaction optimization
 
-### 🛡️ Validaciones de Negocio
-- Formato válido de códigos Color Index
-- Consistencia en relaciones FK
-- Validación de códigos hexadecimales
-- Unicidad en identificadores comerciales
+### 🛡️ Business Validations
+- Valid Color Index code format
+- Consistency in FK relationships
+- Hexadecimal code validation
+- Uniqueness in commercial identifiers
 
 ---
 
-## 🚀 Instalación y Uso
+## 🚀 Installation and Usage
 
-### 📋 Prerrequisitos
+### 📋 Prerequisites
 - .NET 8.x SDK
 - PostgreSQL 12+
 - Git
 
-### 🔧 Configuración Rápida
+### 🔧 Quick Setup
 ```bash
-# Clonar repositorio
-git clone [URL_REPOSITORIO]
+# Clone repository
+git clone [REPOSITORY_URL]
 
-# Configurar base de datos
-# Actualizar connection string en appsettings.json
+# Configure database
+# Update connection string in appsettings.json
 
-# Restaurar dependencias
+# Restore dependencies
 dotnet restore
 
-# Ejecutar aplicación
+# Run application
 dotnet run
 ```
 
-### 📚 Documentación Interactiva
-Una vez ejecutado, accede a:
+### 📚 Interactive Documentation
+Once running, access:
 ```
 https://localhost:5001/swagger
 ```
 
 ---
 
-## 🎖️ Objetivos Académicos
+## 🎖️ Academic Objectives
 
-- ✅ **Patrón Repositorio**: Implementación completa y funcional
-- ✅ **Separación de Capas**: Arquitectura limpia y mantenible  
-- ✅ **Desacoplamiento**: Interfaces para flexibilidad
-- ✅ **Mejores Prácticas**: UUIDs, procedimientos almacenados
-- ✅ **Dominio Especializado**: Conocimiento del sector artístico
-
----
-
-## 📜 Notas del Proyecto
-
-Este proyecto es desarrollado con fines académicos para la Universidad Pontificia Bolivariana. La información sobre pigmentos se basa en estándares internacionales del Color Index y literatura especializada en arte.
+- ✅ **Repository Pattern**: Complete and functional implementation
+- ✅ **Layer Separation**: Clean and maintainable architecture
+- ✅ **Decoupling**: Interfaces for flexibility
+- ✅ **Best Practices**: UUIDs, stored procedures
+- ✅ **Specialized Domain**: Knowledge of the artistic sector
 
 ---
 
-**Desarrollado en Septiembre 2025**
+## 📜 Project Notes
+
+This project is developed for academic purposes at Universidad Pontificia Bolivariana. Information about pigments is based on international Color Index standards and specialized art literature.
+
+---
+
+**Developed in September 2025**
 
 **Universidad Pontificia Bolivariana - Medellín, Colombia** 🇨🇴
